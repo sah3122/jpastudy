@@ -1,6 +1,8 @@
 package jpabook.jpashop.domain;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dongchul on 2019-07-24.
@@ -26,6 +28,8 @@ public class Member {
     @JoinColumn(name ="LOCKER_ID")
     private Locker locker;
 
+    @OneToMany(mappedBy = "member")
+    private List<MemberProduct> memberProducts = new ArrayList<>();
 
     public Team getTeam() {
         return team;
