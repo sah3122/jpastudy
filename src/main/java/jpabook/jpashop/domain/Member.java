@@ -22,6 +22,11 @@ public class Member {
     @JoinColumn(insertable = false, updatable = false)
     private Team team;
 
+    @OneToOne
+    @JoinColumn(name ="LOCKER_ID")
+    private Locker locker;
+
+
     public Team getTeam() {
         return team;
     }
