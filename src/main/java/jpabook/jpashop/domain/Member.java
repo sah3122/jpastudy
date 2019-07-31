@@ -19,7 +19,7 @@ public class Member {
 //    @Column(name = "TEAM_ID")
 //    private Long teamId;
     @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
+    @JoinColumn(insertable = false, updatable = false)
     private Team team;
 
     public Team getTeam() {
