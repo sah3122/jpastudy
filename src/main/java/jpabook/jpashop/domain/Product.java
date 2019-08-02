@@ -10,10 +10,10 @@ public class Product {
     @GeneratedValue
     private Long id;
 
-    @ManyToMany(mappedBy = "member")
-    private List<Member> members = new ArrayList<>();
-
-    @OneToMany(mappedBy = "product")
-    private List<MemberProduct> memberProducts = new ArrayList<>();
+//    @ManyToMany(mappedBy = "member")
+//    private List<Member> members = new ArrayList<>();
+//
+//    @OneToMany(mappedBy = "product")
+//    private List<MemberProduct> memberProducts = new ArrayList<>();
     private String name;
 }

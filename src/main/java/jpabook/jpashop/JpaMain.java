@@ -1,6 +1,7 @@
 package jpabook.jpashop;
 
 import jpabook.jpashop.domain.Member;
+import jpabook.jpashop.domain.Movie;
 import jpabook.jpashop.domain.Team;
 
 import javax.persistence.EntityManager;
@@ -23,21 +24,14 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Team team = new Team();
-            team.setName("teamB");
-            em.persist(team);
-            Member member = new Member();
-            member.setUserName("member2");
-            member.setTeam(team);
-            em.persist(member);
+            Movie movie = new Movie();
+            movie.setActor("ddd");
+            movie.setDirector("dddd");
+            movie.setName("ddd");
+            movie.setPrice(123);
 
-            Member findMemeber = em.find(Member.class, member.getId());
+            em.persist(movie);
 
-            List<Member> members = findMemeber.getTeam().getMembers();
-
-            for (Member member1 : members) {
-                System.out.println(member1.getUserName());
-            }
 
 
             tx.commit();
