@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import static javax.persistence.FetchType.LAZY;
+
 /**
  * Created by dongchul on 2019-08-01.
  */
@@ -19,7 +21,7 @@ public class Delivery {
     private String zipcode;
     private DeliveryStatus deliveryStatus;
 
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(mappedBy = "delivery", fetch = LAZY)
     private Order order;
 
 
