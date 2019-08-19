@@ -10,3 +10,5 @@ jpashop.iml
 jpashop\.iml
 
 \.idea/
+
+*.class
