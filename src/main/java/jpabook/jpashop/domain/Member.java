@@ -1,5 +1,7 @@
 package jpabook.jpashop.domain;
 
+import jpabook.jpashop.BaseEntity;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.List;
  * Created by dongchul on 2019-07-24.
  */
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
